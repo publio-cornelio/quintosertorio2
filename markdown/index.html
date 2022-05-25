@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tecnica de escritura - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tecnica de escritura";
+        var mkdocs_page_input_path = "markdown.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Tecnica de escritura</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#saltarse-el-formateado-de-texto">Saltarse el formateado de texto</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anadir-links">Añadir links</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#estructurar-texto">Estructurar texto</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte tecnico de esta web &raquo;</li><li>Tecnica de escritura</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="tecnica-de-escritura-con-markdown">Tecnica de escritura con Markdown</h1>
+<p>En este apartado, veremos significa escribir en Markdown, y cuales son las convecciones y etiquetas que se utilizan para que el editor pueda procesarlo en un texto formateado.</p>
+<h2 id="saltarse-el-formateado-de-texto">Saltarse el formateado de texto</h2>
+<p>Como el tema que estamos tratando consiste en mostrar las diferencias entre el texto formateado y sin formatear, la mejor manera es utilizar las herramientas que nos permiten evitar que el texto sea formateado.</p>
+<pre><code>La forma basica de evitar el formateado es indentando el párrafo con tab o
+ con cuatro espacios en blanco.
+</code></pre>
+<pre><code>
+Una forma mas evolucionada es delimitar el bloque entre una linea de virgulillas ~~~ o 
+una linea comillas invertidas ```. Deben ser tres o mas, 
+y con la misma cantidad al principio y al final.
+
+</code></pre>
+<pre><code class="language-yaml">Si se trata de codigo e incluimos el tipo de lenguaje al final de la linea inicial
+(~~~yaml), el texto queda resaltado diferenciando los distintos elementos.
+
+site_name: Soporte tecnico
+nav:
+    - Inicio: index.md
+    - Soporte tecnico de esta web: mkdocs.md
+    - Tecnica de escritura : markdown.md
+theme: readthedocs
+</code></pre>
+<p>Otro metodo es incluir una linea entre comillas invertidas `. Ademas, si casualmente el texto acotado necesita mostrar comillas invertidas en el texto, podemos delimitarlo con dos ``</p>
+<p><code>Este texto se mostrara como una `linea` de código</code></p>
+<p>Este texto se mostrara como una <code>linea</code> de código</p>
+<p>Por ultimo, es interesante poder mostrar los signos utilizados para etiquetar el texto, para ello utilizamos una barra invertida \. </p>
+<p><code>Por ultimo, es interesante poder mostrar los signos utilizados para etiquetar el texto, para ello utilizamos una barra invertida \\</code></p>
+<h2 id="anadir-links">Añadir links</h2>
+<p>Los links es lo mas caracteristico en cualquier pagina web, un metodo para conectar contenidos relacionados.
+En markdown un link se realiza utilizando corchetes [] para incluir el texto mostrado, seguido de parentesis () con el enlace. Asi por ejemplo, <a href="./#tecnica-de-escritura-con-markdown">link al inicio de esta pagina</a>, tiene el siguiente texto simple:
+<code>[link al inicio de esta pagina](markdown.md#tecnica-de-escritura-con-markdown)</code> </p>
+<p>Se pueden utilizar referencias absolutas, relativas y cruzadas. En el caso de las <a href="#tecnica-de-escritura-con-markdown">referencias cruzadas</a> que son las dirigidas a los encabezamientos del propio articulo, se basan en identificadores generados de forma automatica por el programa y las puede encontrar en la barra de direcciones del navegador. Pulse la direccion que desea en el navegador de la pagina y copie el texto que sigue al signo almohadilla, en la forma:  <code>[referencias cruzadas](#tecnica-de-escritura-con-markdown)</code>.</p>
+<p>Otro metodo es que muestra el link directamente es utilizar paréntesis puntiagudos&lt;&gt; en la forma <code>&lt;http://google.es&gt;</code>, que se mostraria con  <a href="http://google.es">http://google.es</a>.</p>
+<p>Si deseamos incluir una imagen, un signo de cierre de exclamacion ! debe preceder al formato del link. La siguiente imagen se obtiene escribiendo:
+<code>![Imagen ](/img/screenshot.png)  ![Imagen ](/img/screenshot.png"Esta imagen tiene titulo")</code></p>
+<p>Utilizamos una referencia relativa hacia el directorio donde archivamos la imagen. En la segunda añadimos un texto entre comillas dobles, para mostrar un texto al posar el cursor. </p>
+<p><img alt="Imagen " src="/img/screenshot.png" />  <img alt="Imagen " src="/img/screenshot.png" title="Esta imagen tiene titulo" /></p>
+<p>Por ultimo, les dejo la <a href="/src/markdown.txt">referencia</a> a un archivo con el texto simple completo de este articulo. Una linea <code>[referencia](/src/markdown.txt)</code> facilita la descarga del documento en su navegador.</p>
+<h2 id="estructurar-texto">Estructurar texto</h2>
+<p>Titulos y encabezados es la manera mas basica de estructurar un texto, y se hace con un signo introductorio de almohadilla #. El encabezado de este articulo esta formado por:</p>
+<pre><code># Tecnica de escritura con Markdown
+## Estructurar texto
+### Este seria un encabezado del siguiente nivel
+</code></pre>
+<p>Otro metodo utiliza los signos igual \= y el signo menos -. Si bien solo dispone de dos niveles equivalentes a los dos primeros niveles:</p>
+<pre><code>Tecnica de escritura con Markdown
+===
+Estructura texto
+---
+</code></pre>
+<p>Las listas{#listas} es otro tipo de organizacion, exitiendo:</p>
+<ol>
+<li>Listas ordenadas, que utilizan numeros</li>
+<li>Listas desordenadas, que utiliza indistintamente los signos:<ul>
+<li>El signo *</li>
+<li>El signo +</li>
+<li>El signo - </li>
+</ul>
+</li>
+</ol>
+<pre><code>1. Listas ordenadas, que utilizan numeros
+2. Listas desordenadas, que utiliza indistintamente los signos:
+    * El signo \*
+    + El signo \+
+    - El signo \- 
+</code></pre>
+<p>Hay que indicar, que para anidar una lista se indenta con cuatro espacios.</p>
+<p>Para enfatizar nuestro texto, se aplican indistintamente asteriscos * y guiones bajos_.</p>
+<ul>
+<li><em>simple en cursiva</em> <code>_simple en cursiva_, *simple en cursiva*</code></li>
+<li><strong>doble en negrita</strong> <code>__doble en negrita__, **doble en negrita**</code></li>
+</ul>
+<p>Para indicar que estamos citando a otro autor <code>&gt;se utiliza al inicio el signo  de desigualdad \&gt;</code></p>
+<blockquote>
+<p>se utiliza al inicio el signo  de desigualdad ></p>
+</blockquote>
+<p>Los parrafos se generan con un espacio de una linea en blanco. Añadir mas de una linea no se traduce en un mayor numero de lineas en el texto formateado.<br />
+Para hacer un salto de linea incluido en el mismo parrafo, es preciso cerrar la linea con dos espacios antes de dar a la tecla Enter.</p>
+<p>Para remarcar el cierre de una seccion se puede añadir una linea mediante asteriscos \*, guiones -, y guiones bajos _, indistintamente. Por ejemplo, el siguiente texto origina tres lineas identicas.</p>
+<pre><code>---
+***
+___
+</code></pre>
+<hr />
+<hr />
+<hr />
+<h2 id="conclusion">Conclusion</h2>
+<p>Markdown nos ofrece un numero abundante de etiquetas, que actuan como atajos para procesar el texto que escribimos directamente en el teclado. Acostumbrarse a usarlos lleva tiempo, pero al final nos permite escribir un texto embellecido con mucha mayor rapidez en el momento de crear nuestro blog. Existen una serie de caracteristicas avanzadas, que suponen una evolucion posterior del lenguaje original y que se denomino Multimarkdown. Seran tratadas en nuestro proximo articulo.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../mkdocs/" class="btn btn-neutral float-left" title="Aspectos básicos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../markdown_extensions/" class="btn btn-neutral float-right" title="Tecnica de escritura avanzada">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../mkdocs/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../markdown_extensions/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

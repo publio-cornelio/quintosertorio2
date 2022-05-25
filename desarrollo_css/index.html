@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Creación paso a paso de página web - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Creaci\u00f3n paso a paso de p\u00e1gina web";
+        var mkdocs_page_input_path = "desarrollo_css.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Creación paso a paso de página web</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#herramientas">Herramientas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#proceso-paso-a-paso">Proceso paso a paso.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusión</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>S. tecn. de la web de presentación &raquo;</li><li>Creación paso a paso de página web</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creacion-paso-a-paso-de-pagina-web">Creación paso a paso de página web</h1>
+<p>La pagina de presentación de este sitio web, es una ‘web resposive’. Esto significa que su distribución se modifica conforme al tamaño de pantalla del dispositivo, manteniendo un estilo atractivo.</p>
+<p>Este tipo de paginas web se ha ido imponiendo con la aparición de los dispositivos móviles. La razón es que la interacción con el dispositivo móvil y el ordenador es distinta, en uno se da preferencia al desplazamiento vertical de la pagina y en el otro al click con el raton. Para unir estas dos características, lo ideal es realizar una única pagina de presentación donde te desplazas verticalmente o a través de clics en el navegador.</p>
+<h2 id="herramientas">Herramientas</h2>
+<p>La herramienta básica en cualquier programación es un editor de texto, si bien, para facilitar la tarea es preferible un entorno de desarrollo, siendo mi recomendación Visual Studio Code. Presenta un sistema de auto-completado de etiquetas html muy util y la posibilidad de lanzar un servidor para ver la evolución de la pagina web a medida que realizamos cambios.</p>
+<p>Otra herramienta imprescindible es un entorno de desarrollo en linea llamado Codepen, que te permite hacer simulacros de partes de tu pagina web para ver su funcionamiento y luego incorporarlos a tu propio proyecto. También tiene una biblioteca de proyectos de otras personas, que puedes manipular como proceso de aprendizaje.</p>
+<h2 id="proceso-paso-a-paso">Proceso paso a paso.</h2>
+<p>El proceso de creación de una pagina web conviene realizarlo desde lo general a lo particular. La base del diseño son los distintos bloques que constituyen el cuerpo de la pagina, con su texto y fotos. Luego el pie de pagina, y por ultimo el cabecero que incluye el navegador que es el apartado mas dinámico y con una distribución mas complicada.</p>
+<ol>
+<li>
+<p>La base del diseño. En este punto voy a recomendar el tutorial  realizado por <a href="https://www.youtube.com/watch?v=bn-DQCifeQQ">Kevin Powell</a>. Es insuperable. Quiero destacar dos cosas:</p>
+<p>El uso que hace del módulo flexbox, pudiendo ampliar el conocimiento de este módulo con otros tutoriales del mismo autor. </p>
+<p>Como comienza a configurar su archivo css desde características generales de tipografía,  de color de fondo y fuentes; y con la eliminacion de los margenes preconfigurados en los distintos elementos.</p>
+</li>
+<li>
+<p>Crear el pie de pagina. El pie de pagina es el bloque inferior de la base del diseño, por lo que se aplica la misma técnica. La diferencia es que por convención, en este apartado se sitúan los avisos legales, la política de privacidad y de cookies. En breve, es obligatorio incluir todo estos apartados en aquellas paginas en que se busque un beneficio económico, se recopilen datos de los usuarios -por ejemplo, en formularios – o se utilicen cookies.</p>
+</li>
+<li>
+<p>Crear el cabecero, con el navegador. La distribución de elementos tiene sus características particulares en comparación al diseño base y exige un control mayor de los cambios, ya que podemos hacer aparecer y desaparecer elementos del navegador en función del tamaño de pantalla. Este tutorial de <a href="https://www.youtube.com/watch?v=8QKOaTYvYUA">Kevin Powell</a> resulta muy clarificador.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusión</h2>
+<p>Siguiendo los pasos en los tutoriales descritos se puede realizar una pagina web responsive basada exclusivamente en html y css. Kevin Powell es un gran comunicador y sus innumerables tutoriales facilitan la comprensión de los distintos componentes de css. Ademas, los ejemplos de Codepen te aportan nuevas ideas y tecnicas haciendo que este sea un camino relativamente fácil de introducirse en el mundo de la programación.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../html_tecnica/" class="btn btn-neutral float-left" title="Aspectos básicos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../html_tecnica/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

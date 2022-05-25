@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Aspectos básicos - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aspectos b\u00e1sicos";
+        var mkdocs_page_input_path = "mkdocs.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Aspectos básicos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-instalacion">Mkdocs. Instalacion</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mkdocs-uso">Mkdocs. Uso</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mkdoks-despliegue-manual-en-netlify">Mkdoks. Despliegue manual en netlify</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte tecnico de esta web &raquo;</li><li>Aspectos básicos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="soporte-tecnico-de-esta-web">Soporte tecnico de esta web</h1>
+<p>El metodo para la publicacion de esta web, probablemente sea el mas eficiente que existe en la actualidad. Un programa llamado mkdocs te da la infraestructura para convertir archivos de texto en html, la conversion se agrupa en un directorio y este directorio se sube a internet con un copia y pegar. </p>
+<p>El procedimiento tienes varios matices que vamos a ver a continuacion, pero el resumen es correcto.</p>
+<h2 id="mkdocs-instalacion">Mkdocs. Instalacion</h2>
+<p>Es un programa escrito en python que funciona en linea de comandos. Para su uso, la instalacion de python es imprescindible. Tambien resulta conveniente instalar un programa llamado anaconda o su version lite, miniconda3, que actue de contenedor de la instalacion de python, en lugar de instalarlo directamente en el sistema.
+Miniconda se instala mediante un ejecutable y te da un entorno en linea de comandos que permite instalar python atraves de la orden:</p>
+<p>conda create -n myenv</p>
+<p>Python te permite instalar mkdocs en linea de comandos con pip:</p>
+<p>pip install mkdocs.</p>
+<h2 id="mkdocs-uso">Mkdocs. Uso</h2>
+<p>El uso principal de este programa, y otros parecidos, es publicar documentacion tecnica. En algunos casos acaban reproducidos en libros identicos al material en linea. Por ello, la pagina web de presentacion es la propia documentacion tecnica del producto y se encuentra alojada en: <a href="https://www.mkdocs.org">mkdocs</a>. </p>
+<p>En breve, hay una estructura de directorios con archivos de tipo markdown y en el directorio base hay un archivo de tipo yaml que sirve para la configuracion. El archivo yaml configura el navegador de la pagina web y su conexion a los archivos markdown, el titulo, el tema de estilo, los atributos en la conversion del markdown a html y distintos plugins.</p>
+<p>Durante la configuracion se puede lanzar un servidor en linea de comandos mediante la orden: mkdocs serve. Cuando nos disponemos a publicar hay que generar un directorio de html, css y javascript mediante la orden : mkdocs build. </p>
+<h2 id="mkdoks-despliegue-manual-en-netlify">Mkdoks. Despliegue manual en netlify</h2>
+<p>La publicacion se puede hacer manualmente o atraves de un sistema de control de versiones tipo git.</p>
+<p>El despliegue manual es tan sencillo como copiar el directorio producido en el paso anterior y pegarlo en la pagina habilitada por netlify. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Es un sistema muy rapido de publicacion, progresivamente ganando habilidades con la escritura markdown y mejorando la configuracion basica yaml, para mejorar sus prestaciones. Pero de entrada, ya estamos publicando.
+El proximo capitulo explicara como incorporar un sistema de control de versiones, que nos facilitara enormemente la actualizacion de nuestra pagina web.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Inicio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../markdown/" class="btn btn-neutral float-right" title="Tecnica de escritura">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../markdown/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

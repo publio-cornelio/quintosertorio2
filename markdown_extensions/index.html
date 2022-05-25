@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Tecnica de escritura avanzada - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Tecnica de escritura avanzada";
+        var mkdocs_page_input_path = "markdown_extensions.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Tecnica de escritura avanzada</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#abreviaturas">Abreviaturas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bloques-de-codigo-vallado">Bloques de codigo vallado</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tablas">Tablas</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#tabla-de-contenidos">Tabla de contenidos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#metadatos">Metadatos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte tecnico de esta web &raquo;</li><li>Tecnica de escritura avanzada</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="caracteristicas-avanzadas-de-markdown">Caracteristicas avanzadas de markdown.</h1>
+<p>Con la intencion de adaptar markdown (<abbr title="Abreviatura para Markdown">MD</abbr>) a un entorno academico, y permitir el uso, por ejemplo, de abreviaturas o tablas, se amplio el lenguaje. Esta ampliacion se denomino multimarkdown (<abbr title="Abreviatura para Multimarkdown">MMD</abbr>).<br />
+En mkdocs, se utiliza una libreria de python markdown y esta ampliacion se implementa mediante <a href="https://python-markdown.github.io/extensions/">markdown_extensions (ME)</a> en el archivo de configuracion yaml. El programa incluye las siguiente extensiones por defecto (meta, toc, tables, and fenced_code). En este articulo, hablaremos de estas y de la incluidas a mayores en la configuracion de este blog.</p>
+<p>A continuacion presento un listado de las extensiones soportadas oficialmente por python markdown. Existen tambien extensiones de terceros, para mas informacion utilicen enlace de ME. </p>
+<table>
+<thead>
+<tr>
+<th>Extension</th>
+<th>Entry Point</th>
+<th>Dot Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extra</td>
+<td>extra</td>
+<td>markdown.extensions.extra</td>
+</tr>
+<tr>
+<td>- Abbreviations</td>
+<td>abbr</td>
+<td>markdown.extensions.abbr</td>
+</tr>
+<tr>
+<td>- Attribute Lists</td>
+<td>attr_list</td>
+<td>markdown.extensions.attr_list</td>
+</tr>
+<tr>
+<td>- Definition Lists</td>
+<td>def_list</td>
+<td>markdown.extensions.def_list</td>
+</tr>
+<tr>
+<td>- Fenced Code Blocks</td>
+<td>fenced_code</td>
+<td>markdown.extensions.fenced_code</td>
+</tr>
+<tr>
+<td>- Footnotes</td>
+<td>footnotes</td>
+<td>markdown.extensions.footnotes</td>
+</tr>
+<tr>
+<td>- Markdown in HTML</td>
+<td>md_in_html</td>
+<td>markdown.extensions.md_in_html</td>
+</tr>
+<tr>
+<td>- Tables</td>
+<td>tables</td>
+<td>markdown.extensions.tables</td>
+</tr>
+<tr>
+<td>Admonition</td>
+<td>admonition</td>
+<td>markdown.extensions.admonition</td>
+</tr>
+<tr>
+<td>CodeHilite</td>
+<td>codehilite</td>
+<td>markdown.extensions.codehilite</td>
+</tr>
+<tr>
+<td>Legacy Attributes</td>
+<td>legacy_attrs</td>
+<td>markdown.extensions.legacy_attrs</td>
+</tr>
+<tr>
+<td>Legacy Emphasis</td>
+<td>legacy_em</td>
+<td>markdown.extensions.legacy_em</td>
+</tr>
+<tr>
+<td>Meta-Data</td>
+<td>meta</td>
+<td>markdown.extensions.meta</td>
+</tr>
+<tr>
+<td>New Line to Break</td>
+<td>nl2br</td>
+<td>markdown.extensions.nl2br</td>
+</tr>
+<tr>
+<td>Sane Lists</td>
+<td>sane_lists</td>
+<td>markdown.extensions.sane_lists</td>
+</tr>
+<tr>
+<td>SmartyPants</td>
+<td>smarty</td>
+<td>markdown.extensions.smarty</td>
+</tr>
+<tr>
+<td>Table of Contents</td>
+<td>toc</td>
+<td>markdown.extensions.toc</td>
+</tr>
+<tr>
+<td>WikiLinks</td>
+<td>wikilinks</td>
+<td>markdown.extensions.wikilinks</td>
+</tr>
+</tbody>
+</table>
+<h2 id="abreviaturas">Abreviaturas</h2>
+<p>Son lineas no visibles cuyo texto aparecera cuando posemos el cursor sobre las abreviaturas del documento.</p>
+<pre><code>*[MMD]: Abreviatura para Multimarkdown
+
+*[MD]: Abreviatura para Markdown
+</code></pre>
+<p>Un sistema parecido, sin asterisco *, viene incluido por defecto para los <a href="/markdown/#anadir-links">enlaces</a>. Resulta util separar los enlaces en el texto no formateado para facilitar la lectura.</p>
+<pre><code>[enlaces][enlace a añadir links]
+
+[enlace a añadir links]: /markdown/#anadir-links
+
+</code></pre>
+<h2 id="bloques-de-codigo-vallado">Bloques de codigo vallado</h2>
+<p>Los fenced code blocks ya los vimos en <a href="/markdown/#saltarse-el-formateado-de-texto">saltarse el formateado del texto</a>. Es el metodo que utiliza virgulillas o acentos invertidos, frente al uso de indentado, que era el metodo originario de <abbr title="Abreviatura para Markdown">MD</abbr>.</p>
+<h2 id="tablas">Tablas</h2>
+<p>Esta util caracteristica la utilizamos al inicio del articulo. Utiliza una barra vertical |, guion - y dos puntos : para su ejecucion, este ultimo para el justificado del texto.</p>
+<pre><code>Extension  |    Entry Point |   Dot Notation
+:--|:--:|--:
+izquierda | centro | derecha
+</code></pre>
+<table>
+<thead>
+<tr>
+<th align="left">Extension</th>
+<th align="center">Entry Point</th>
+<th align="right">Dot Notation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">izquierda</td>
+<td align="center">centro</td>
+<td align="right">derecha</td>
+</tr>
+</tbody>
+</table>
+<h2 id="tabla-de-contenidos">Tabla de contenidos</h2>
+<p>Esta extension se encarga se generar el indice con los cabeceros que aparecen en el navegador. Presenta las siguientes opciones configuradas por defecto.</p>
+<table>
+<thead>
+<tr>
+<th>Opciones</th>
+<th>Por defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>slugify</td>
+<td>headerid.slugify</td>
+</tr>
+<tr>
+<td>separator</td>
+<td><code>"-"</code></td>
+</tr>
+<tr>
+<td>title</td>
+<td>automatically set</td>
+</tr>
+<tr>
+<td>permalink</td>
+<td>false</td>
+</tr>
+<tr>
+<td>permalink_title</td>
+<td>Permanent link</td>
+</tr>
+<tr>
+<td>baselevel</td>
+<td>1</td>
+</tr>
+<tr>
+<td>toc_depth</td>
+<td>6</td>
+</tr>
+</tbody>
+</table>
+<p>En breve, <em>slugify</em> es el metodo con que se crean los indices apartir del texto de los encabezados; sustituye los espacios en blanco con un <em>separator</em>. <em>Permalink</em> significa si deseamos mostrar dicho indice junto al encabezado y <em>permalink_title</em> el texto visible para dicho link. <em>Title</em> indica donde se obtiene el titulo del articulo que aparece en el navegador, por defecto procede del archivo de configuracio yaml. Por ultimo, <em>baselevel</em> indica el aspecto html del nivel de encabezado inicial(por defecto un # se corresponde con h1, si incrementas hasta 2 seria h2), y <em>toc_depth</em> el ultimo nivel de encabezado que genera una entrada en la tabla de contenidos.</p>
+<p>Si se desea ampliar la informacion, con atributos adicionales, les remitimos a <a href="https://python-markdown.github.io/extensions/toc/">la pagina especifica de python markdown</a>.</p>
+<h2 id="metadatos">Metadatos</h2>
+<p>Los metadatos de un texto son informacion estructurada con parejas de palabras clave/valor como el archivo de configuracion yaml, pero enfocados a cada articulo concreto. Incluye informacion descriptiva (autor, titulo, copyright) pero tambien informacion tecnica (CSS, HTML, LateX,BibTeX...) que permite un procesado posterior en el entorno adecuado. En el ambito de <abbr title="Abreviatura para Multimarkdown">MMD</abbr>, las palabras clave aplicables son fijas y aparecen en la <a href="https://fletcher.github.io/MultiMarkdown-6/syntax/metadata.html">documentacion original</a>.</p>
+<p>Mkdocs permite utilizar tanto un estilo <abbr title="Abreviatura para Multimarkdown">MMD</abbr>, como un estilo yaml. Ambos deben incluirse al inicio del documento. Si el estilo es yaml hay que añadir un delimitador de puntos <code>...</code> o guiones <code>---</code>.</p>
+<p>Una forma sencilla y practica de uso, es a traves de una plantilla con metadatos descripitivos, guardados en un archivo independiente que utilizaremos para empezar todos nuestros articulos. Podriamos aplicar las siguientes palabras clave, inevitablemente en ingles y sensible a mayúsculas:</p>
+<table>
+<thead>
+<tr>
+<th><abbr title="Abreviatura para Multimarkdown">MMD</abbr> original</th>
+<th>extension</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Title</td>
+<td>Summary</td>
+</tr>
+<tr>
+<td>Date</td>
+<td>blank-value</td>
+</tr>
+<tr>
+<td>Language</td>
+<td>some_urls</td>
+</tr>
+<tr>
+<td>Author</td>
+<td>Authors</td>
+</tr>
+<tr>
+<td>Affiliation</td>
+<td></td>
+</tr>
+<tr>
+<td>Copyright</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="conclusion">Conclusion</h2>
+<p>Me he centrado en las extensiones de <abbr title="Abreviatura para Multimarkdown">MMD</abbr> incluidas por defecto, si mas adelante descubriese otras nuevas que me pareciesen utiles las ire incluyendo. Con lo que he incluido, hay utilidades mas que suficientes para escribir en <abbr title="Abreviatura para Markdown">MD</abbr> de forma comoda y eficiente. Quiero señalar, que si bien yo estoy utilizando la version original de mkdocs, me he encotrado con una version mas evolucionada con una documentacion mas detallada y les dejo el <a href="https://squidfunk.github.io/mkdocs-material/getting-started/">link</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../markdown/" class="btn btn-neutral float-left" title="Tecnica de escritura"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../configuracion_yaml/" class="btn btn-neutral float-right" title="Configuracion del sistema">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../markdown/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../configuracion_yaml/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

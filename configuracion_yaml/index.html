@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Configuracion del sistema - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configuracion del sistema";
+        var mkdocs_page_input_path = "configuracion_yaml.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Configuracion del sistema</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#copyright">Copyright</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#temas-adaptacion-y-configuracion">Temas. Adaptacion y configuracion.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plugins">Plugins</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#el-buscador">El buscador</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#otros-plugins">Otros plugins</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte tecnico de esta web &raquo;</li><li>Configuracion del sistema</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="configuracion-del-sistema">Configuracion del sistema</h1>
+<p>Mkdocs puede funcionar con una configuracion minima que incluye el titulo del sistema, los enlaces del navegador, con el titulo de cada articulo y el nombre del archivo al que se encuentra enlazado, en la forma:</p>
+<pre><code class="language-yaml">
+site_name: Soporte tecnico
+nav:
+    - Inicio: index.md
+    - Soporte tecnico de esta web: mkdocs.md
+    - Tecnica de escritura : markdown.md
+    - Tecnica de escritura avanzada : markdown_extensions.md
+
+</code></pre>
+<p>Yo he decidido cambiar el tema y añadir una extension de markdow que soporta abreviaturas.</p>
+<pre><code class="language-yaml">theme: readthedocs
+
+markdown_extensions:
+    - abbr
+
+</code></pre>
+<p>Sobre las extensiones de markdown no hablaremos en este articulo, estan explicadas en un <a href="../markdown_extensions/">articulo previo</a>. </p>
+<h2 id="copyright">Copyright</h2>
+<p>La palabra clave 'copyright' te permite incluir una nota a pie de pagina con informacion legal y sus links, escritos en html.</p>
+<pre><code class="language-yaml">copyright: Copyright &amp;copy; 2022 &lt;a href=&quot;#&quot;&gt;Aviso legal&lt;/a&gt;, Maintained by the &lt;a href=&quot;&quot;&gt;QuintoSertorio&lt;/a&gt;
+</code></pre>
+<h2 id="temas-adaptacion-y-configuracion">Temas. Adaptacion y configuracion.</h2>
+<p>Los temas se refieren al estilo del programa. De base, existen dos para elegir (mkdocs o readthedocs), pero se pueden crear temas nuevos, adaptar temas ya existentes o descargar nuevos <a href="https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes">temas de terceros</a>.</p>
+<p>Para adaptar el tema elegido, debemos indicar la localizacion del archivo css con una referencia relativa:</p>
+<pre><code class="language-yaml">extra_css:
+    - css/extra.css
+</code></pre>
+<p>Para configurar existen una serie de palabras clave:</p>
+<ul>
+<li>name, para seleccionar el tema.</li>
+<li>locale, el lenguaje que va a utilizar el tema. En la documentacion encontraremos a que idiomas esta traducido.</li>
+<li>analytics, define las caracteristicas de un servicio analitico, como Google Analytics</li>
+<li>highlightjs, activa el resalte con colores de los bloques de codigo mediante la libreria <a href="https://highlightjs.org/">highlight.js</a>. Valor por defecto es true.</li>
+<li>hljs_languages, incluye lenguaje de programacion no incluido en el soporte basico.</li>
+</ul>
+<p>La lista continua, con una descripcion exhaustiva de los dos temas basicos en el <a href="https://www.mkdocs.org/user-guide/choosing-your-theme/#choosing-your-theme">enlace</a></p>
+<h2 id="plugins">Plugins</h2>
+<p>Los temas incluyen un unico plugin de base que es el buscador, el cual utiliza el programa lunr.js como motor de busquedas. </p>
+<p>Si decidimos configurar los plugins, es necesario especificar la opcion search para que conserve esta funcionalidad. La sintaxis es de dos tipos,o bien con guiones - o con llaves{}, por lo que hay que ser preciso y no mezclarlos.</p>
+<pre><code class="language-yaml">lugins:
+    - search
+    - your_other_plugin:
+        option1: value
+        option2: other value
+
+</code></pre>
+<pre><code class="language-yaml">plugins:
+    search: {}
+    your_other_plugin:
+        option1: value
+        option2: other value
+
+</code></pre>
+<h3 id="el-buscador">El buscador</h3>
+<p>Es un elemento muy util del programa que se puede configurar levemente utilizando las siguientes palabras claves:</p>
+<table>
+<thead>
+<tr>
+<th>Palabra clave</th>
+<th>Por defecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>separator</td>
+<td><code>'[\s\-]+'</code></td>
+</tr>
+<tr>
+<td>min_search_length</td>
+<td><code>3</code></td>
+</tr>
+<tr>
+<td>lang</td>
+<td>1.<code>theme.locale</code>, 2. <code>en</code></td>
+</tr>
+<tr>
+<td>prebuild_index</td>
+<td><code>False</code></td>
+</tr>
+<tr>
+<td>indexing</td>
+<td><code>full</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="otros-plugins">Otros plugins</h3>
+<p>En lo referente a otros plugins les remito a un <a href="https://chrieke.medium.com/the-best-mkdocs-plugins-and-customizations-fc820eb19759">articulo</a> donde se muestran algunas utilidades para integra el jupyter notebook, o para realizar graficos. Otra direccion utile es <a href="https://facelessuser.github.io/pymdown-extensions/">Pymdown extensions</a>. En general, se trata de utilidades tecnicas propias de la ciencia de datos, que se alejan del objetivo de este blog.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>En este punto, se cierra el ciclo de articulos enfocados en mkdocs. La siguiente etapa se centrara en el servicio anfitrion de la nube, Netlify y del sistema de publicacion con Git y Github.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../markdown_extensions/" class="btn btn-neutral float-left" title="Tecnica de escritura avanzada"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../publicacion_automatica/" class="btn btn-neutral float-right" title="Publicacion automatica en Netlify">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../markdown_extensions/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../publicacion_automatica/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

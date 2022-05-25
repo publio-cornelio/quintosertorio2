@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Publicacion automatica en Netlify - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Publicacion automatica en Netlify";
+        var mkdocs_page_input_path = "publicacion_automatica.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Publicacion automatica en Netlify</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#git">Git</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#github">Github</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#netlify">Netlify</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte tecnico de esta web &raquo;</li><li>Publicacion automatica en Netlify</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="publicacion-automatica-en-netlify">Publicacion automática en Netlify</h1>
+<p>La publicacion en Netlify de un sitio generado en python no es un proceso habitual, dado que Netlify esta orientado a javascript. En cualquier caso es posible, siempre que la trasformacion de markdown hacia html la hagamos previamente y enviaemos el resultado a Netlify.</p>
+<p>El proceso requiere del uso de un programa en linea de comandos llamado git, su conexion a un sistema de hospedaje llamado Github, y la conexion de este a Netlify. La ejecucion de primer envio es lo que explicaremos a continuacion, ya que los siguientes se realizan con una linea de comando de git.</p>
+<h2 id="git">Git</h2>
+<p>Git es un programa para controlar las versiones de nuestro proyectos. Le indicamos que directorio queremos controlar y de forma automatica almacena cada version, mientras lleva un control de los cambios realizados. En proyectos multipersonales, nos da un control sobre la autoria y la fecha de cada parte y version del proyecto.<br />
+En nuestro caso su uso es sencillo, con el objetivo de automatizar el proceso de publicacion.</p>
+<p>Tras instalar Git, activamos una terminal y en linea de comandos nos dirigimos al directorio que deseamos controlar, y alli escribimos: <code>git init</code></p>
+<p>A partir de este momento habremos creado un sistema git en una carpeta oculta en el directorio elegido o area de trabajo. Un sistema git consta de un area de trabajo y dos carpetas virtuales, el area de preparacion (staging area) y el repositorio git.
+).</p>
+<p>El flujo de trabajo es circular, </p>
+<ul>
+<li>del area de trabajo al area de preparacion, con <code>git add .</code>(se puede seleccionar parte del directorio, el punto indica todos el contenido)</li>
+<li>del area de preparacion al repositorio, con  <code>git commit -m "Mensaje asociado a la version"</code></li>
+<li>tras crear un repositorio, podemos comparar los cambios con el area de trabajo con <code>git diff</code></li>
+<li>si quisiesemos recuperar parte o todo el repositorio git al area de trabajo, usariamos <code>git stash</code> </li>
+<li>Por ultimo, indicar que podemos dejar fuera de este proceso circular, archivos y carpetas creando un archivo de configuracion en el area de trabajo denominado <code>.gitignore</code></li>
+</ul>
+<p>Para cumplir nuestro objetivo no hace falta conocer el programa en profundidad, por lo que pasaremos al siguiente paso.</p>
+<h2 id="github">Github</h2>
+<p>Es un anfitrion en la nube intimamente relacionado con el sistema Git, que almacena los repositorios que le enviamos, te da la opcion de mostrar publicamente las lineas de codigo y facilita el trabajo colaborativo.</p>
+<p>Para utilizarlo hace falta abrir una cuenta, crear un repositorio nuevo y almacenar la direccion http creada en nuestro git local mediante la orden:</p>
+<p><code>git remote add origin https://github.com/nombre de cuenta/nombre de repositorio.git</code></p>
+<p>Estas ordenes vienen especificadas en la pagina abierta por github tras crear un repositorio nuevo. La siguiente es <code>git branch -M main</code> que utiliza el modificador -M para <code>mover/renombrar una rama, incluso si el destino existe</code>. Podemos ver todas la rama asociadas a nuestro repositorio local utilizando la linea <code>git branch -a</code></p>
+<p>Por ultimo, empujamos nuestro repositorio hacia el anfitrion con <code>git push -u origin main</code> donde el modificador -u <code>configurar upstream para git pull/status</code></p>
+<h2 id="netlify">Netlify</h2>
+<p>Uno de los metodos para acceder a Netlify es utilizar la misma cuenta de Github. Luego es preciso establecer una conexion entre el repositorio que queremos publicar y su localizacion de publicacion. Existe un boton que indica publicacion de un nuevo sitio web, y un asistente te dirige a lo largo de proceso.</p>
+<p>Si has llegado hasta aqui, y todo a funcionado, de ahora en adelante, no necesitaras interactuar con Gibhub ni Netlify. Sigues los pasos para actualizar tu repositorio local, y luego, solo tendras que escribir <code>git push -u origin main</code>, y la actualizacion de tu web se publicara inmediatamente.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>La automatizacion es un proceso laborioso por etapas, pero positivo en el largo paso. Dejo a continuacion un resumen de los pasos realizados</p>
+<ol>
+<li>
+<p>Git</p>
+<ol>
+<li><code>git init</code></li>
+<li><code>git add .</code></li>
+<li><code>git commit -m "Mensaje asociado a la version"</code></li>
+</ol>
+</li>
+<li>
+<p>Github. Tras crear repositorio en linea.</p>
+<ol>
+<li><code>git remote add origin https://github.com/nombre de cuenta/nombre de repositorio.git</code></li>
+<li><code>git branch -M main</code></li>
+<li><code>git push -u origin main</code></li>
+</ol>
+</li>
+</ol>
+<p>Las aplicaciones de Git y de Github, asi como su implementacion en linea de comandos, son mucho mas variadas de lo que hemos presentado en esta pequeña introduccion. En todo caso, este es un buen principio para acostumbrarse a utilizalas y a entenderlas. </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../configuracion_yaml/" class="btn btn-neutral float-left" title="Configuracion del sistema"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../html_tecnica/" class="btn btn-neutral float-right" title="Aspectos básicos">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../configuracion_yaml/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../html_tecnica/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

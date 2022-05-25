@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Aspectos básicos - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Aspectos b\u00e1sicos";
+        var mkdocs_page_input_path = "html_tecnica.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Soporte tecnico
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Aspectos básicos</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#lenguajes-de-marcado-html-y-css">Lenguajes de marcado. HTML y CSS</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#javascript-y-librerias-de-componentes">Javascript y librerias de componentes.</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>S. tecn. de la web de presentación &raquo;</li><li>Aspectos básicos</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="creacion-de-paginas-web">Creacion de paginas web</h1>
+<p>La creación de paginas webs se basa en  dos lenguajes de marcado con etiquetas, html y css, y un lenguaje de programación, javascript (<abbr title="[Abreviatura de javascript]">js</abbr>)</p>
+<p>Un lenguaje de marcado es aquel que junto al texto incorpora etiquetas que nos indican que función tiene dicho texto en dicho documento, por ejemplo, en html <code>&lt;p&gt;&lt;/p&gt;</code> nos indica que el texto contenido es un párrafo.</p>
+<p>Css es un lenguaje de marcado que utiliza las etiquetas creadas en html, para modificar los atributos estéticos del documento y mostrarnos el texto en pantalla con una distribución, tamaño y estéticas determinadas.</p>
+<p>Por contra, <abbr title="[Abreviatura de javascript]">js</abbr> es un lenguaje de programación, con estructuras de control, variables, funciones; su objetivo es facilitar en las paginas web, una estética dinámico y un comportamiento interactivo con el usuario.</p>
+<h2 id="lenguajes-de-marcado-html-y-css">Lenguajes de marcado. HTML y CSS</h2>
+<p>Html es la columna vertebral de cualquier documento en la web. Presenta numerosas etiquetas nativas. El núcleo básico son términos propios de un procesador de textos como encabezado, párrafo, sección; que se amplían con metadatos, con secciones propias de una pagina web como el navegador, y con etiquetas orientadas a incrustar imágenes, contenido multimedia, tablas o formularios. </p>
+<p>La presentación por defecto de un archivo html sigue un patrón flow layout. Lo cual significa, que hay elementos block que se sitúan uno de bajo de otro y elementos inline (el texto) que se se sitúa uno a continuación del otro. </p>
+<p>Pero hablar de elementos en bloque o en linea, es pasar a la terminología del css. Esta habla de la distribución en el espacio de los distintos elementos, de elementos contenedores y elementos contenidos, de los cambios en la disposición en función del tamaño de la pantalla.</p>
+<p>Css utiliza las etiquetas propias del html para seleccionar los elementos y distribuirlos. Y a su vez influye en la creación de elementos auxiliares que actuando como contenedores faciliten dicha distribución. Con este fin, etiquetas como división o span, que no definen una posición precisa dentro de la estructura de un texto, cumplen una función esencial detrás de escena.</p>
+<p>Llegados a este punto parece útil poner un ejemplo sencillo con los elementos esenciales que componen la relación entre html y css.</p>
+<pre><code>Html
+
+ &lt;div class=&quot;division&quot;&gt;&lt;/div&gt;
+        &lt;h1&gt;Esto es un encabezado&lt;/h1&gt;
+        &lt;p class=&quot;texto_azul&quot;&gt;Lorem ipsum dolor sit amet consectetur. Fugit, id.&lt;/p&gt;
+        &lt;p class=&quot;texto_azul&quot;&gt;Lorem ipsum dolor sit, amet consectetur adipisicing elit.&lt;/p&gt;
+        &lt;p&gt;Lorem ipsum dolor sit amet.&lt;/p&gt;
+ &lt;/div&gt;
+
+</code></pre>
+<pre><code>Css
+
+div {}
+.division{}
+h1 {}
+p {}
+.texto_azul{
+    color: blue;
+}
+</code></pre>
+<p>En este ejemplo es interesante resaltar la relacion entre el continente div y el contenido organizado en un cabecero y tres parrafos. Css puede hacer referencia tanto a las etiquetas nativas de html, como a las clases precedidas por un punto. En este caso hemos agrupado dos parrafos y les hemos dado un atributo diferenciador.</p>
+<p>El sistema es sencillo y muy flexible, y exige asignar los atributos de manera ordenada, partiendo de aquellos generales que afectan a todo el documento para continuar hacia los mas especificos. </p>
+<p>La clave en el uso del Css esta en los atributos que determinan la disposicion espacial. Existen varios modelos de disposicion espacial, cada uno con sus atributos. Conocer el modelo es imprescindible para entender la terminologia y aplicacion de sus atributos. Pero esto forma parte del proximo articulo.</p>
+<h2 id="javascript-y-librerias-de-componentes">Javascript y librerias de componentes.</h2>
+<p><abbr title="[Abreviatura de javascript]">Js</abbr> es el componente del trio mas dificil de manejar, si bien se pueden hacer buenas paginas web solo con los otros dos. </p>
+<p>En la web de presentacion el uso de <abbr title="[Abreviatura de javascript]">js</abbr> es minimo. Activa la escucha de tres eventos: el movimiento del scroll, el click de un boton y el cambio de tamaño de pantalla. En funcion de la entrada de datos controla la trasparencia del cabezero. Para facilitar la referencia a las etiquetas y clases del html, el archivo html incorpora una libreria de componentes jquery.</p>
+<p>Estas librerias de componentes son archivos css o <abbr title="[Abreviatura de javascript]">js</abbr> creados por terceros, que incorporan distintas utilidades como facilitar el uso de javascript o mejorar la calidad de los elementos graficos.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Esta introduccion busca ser un marco de referencia antes de comenzar a crear nuestra primera pagina web. La escritura basica de html y css es sencilla, y la complejidad esta hacer crecer un proyecto de forma ordenada sin entrar en contradicciones entre los distintos elementos. En el proximo capitulo mostrare como se desarrollo la web de presentacion.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../publicacion_automatica/" class="btn btn-neutral float-left" title="Publicacion automatica en Netlify"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../desarrollo_css/" class="btn btn-neutral float-right" title="Creación paso a paso de página web">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../publicacion_automatica/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../desarrollo_css/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
