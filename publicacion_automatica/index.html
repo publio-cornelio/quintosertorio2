@@ -31,7 +31,8 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Soporte tecnico
+          <a href="..">
+          <img src="../img/favicon--96x96.png" class="logo" alt="Logo"/>
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
@@ -44,7 +45,11 @@
                 <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
                 </li>
               </ul>
-              <p class="caption"><span class="caption-text">Soporte tecnico de esta web</span></p>
+              <ul>
+                <li class="toctree-l1"><a class="" href="/">Volver a Verba Volant</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte técnico de esta web</span></p>
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
                   </li>
@@ -73,6 +78,13 @@
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
                   </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../integracion/">Integración del proyecto</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte técnico del blog</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../eleventy/">Breve reseña</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -88,7 +100,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>Soporte tecnico de esta web &raquo;</li><li>Publicacion automatica en Netlify</li>
+          <li>Soporte técnico de esta web &raquo;</li><li>Publicacion automatica en Netlify</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -105,9 +117,13 @@
 <p>Git es un programa para controlar las versiones de nuestro proyectos. Le indicamos que directorio queremos controlar y de forma automatica almacena cada version, mientras lleva un control de los cambios realizados. En proyectos multipersonales, nos da un control sobre la autoria y la fecha de cada parte y version del proyecto.<br />
 En nuestro caso su uso es sencillo, con el objetivo de automatizar el proceso de publicacion.</p>
 <p>Tras instalar Git, activamos una terminal y en linea de comandos nos dirigimos al directorio que deseamos controlar, y alli escribimos: <code>git init</code></p>
-<p>A partir de este momento habremos creado un sistema git en una carpeta oculta en el directorio elegido o area de trabajo. Un sistema git consta de un area de trabajo y dos carpetas virtuales, el area de preparacion (staging area) y el repositorio git.
-).</p>
-<p>El flujo de trabajo es circular, </p>
+<p>En este punto hay que configurar la afiliacion de nuestro repositorio, siendo conveniente utilizar los mismos datos que usemos en nuestra cuenta de Github:  </p>
+<p><code>git config user.name "El mismo que en Github"</code></p>
+<p><code>git config user.email "MY_NAME@example.com"</code></p>
+<p>Ahora puede verificar tu configuracion mediante:</p>
+<p><code>cat .git/config</code></p>
+<p>A partir de este momento habremos creado un sistema git en una carpeta oculta en el directorio elegido o area de trabajo. Un sistema git consta de un area de trabajo y dos carpetas virtuales, el area de preparacion (staging area) y el repositorio git.</p>
+<p>El flujo de trabajo entre estas areas es circular, </p>
 <ul>
 <li>del area de trabajo al area de preparacion, con <code>git add .</code>(se puede seleccionar parte del directorio, el punto indica todos el contenido)</li>
 <li>del area de preparacion al repositorio, con  <code>git commit -m "Mensaje asociado a la version"</code></li>
@@ -118,10 +134,11 @@ En nuestro caso su uso es sencillo, con el objetivo de automatizar el proceso de
 <p>Para cumplir nuestro objetivo no hace falta conocer el programa en profundidad, por lo que pasaremos al siguiente paso.</p>
 <h2 id="github">Github</h2>
 <p>Es un anfitrion en la nube intimamente relacionado con el sistema Git, que almacena los repositorios que le enviamos, te da la opcion de mostrar publicamente las lineas de codigo y facilita el trabajo colaborativo.</p>
-<p>Para utilizarlo hace falta abrir una cuenta, crear un repositorio nuevo y almacenar la direccion http creada en nuestro git local mediante la orden:</p>
+<p>Para utilizarlo hace falta abrir una cuenta, crear un repositorio nuevo y almacenar la direccion http der repositorio creado en nuestro git local mediante la orden:</p>
 <p><code>git remote add origin https://github.com/nombre de cuenta/nombre de repositorio.git</code></p>
 <p>Estas ordenes vienen especificadas en la pagina abierta por github tras crear un repositorio nuevo. La siguiente es <code>git branch -M main</code> que utiliza el modificador -M para <code>mover/renombrar una rama, incluso si el destino existe</code>. Podemos ver todas la rama asociadas a nuestro repositorio local utilizando la linea <code>git branch -a</code></p>
-<p>Por ultimo, empujamos nuestro repositorio hacia el anfitrion con <code>git push -u origin main</code> donde el modificador -u <code>configurar upstream para git pull/status</code></p>
+<p>Por ultimo, empujamos nuestro repositorio hacia el anfitrion con <code>git push -u origin main</code> donde el modificador -u <code>configurar upstream para git pull/status</code>.</p>
+<p>Como se puede ver todo el proceso se puede realizar desde una terminal, pero existe un punto en que Github concede credenciales de acceso que en mi caso particular gestiona Visual Studio, pero que no me permite empujar el repositorio desde una terminal normal solo con los pasos aqui indicados.</p>
 <h2 id="netlify">Netlify</h2>
 <p>Uno de los metodos para acceder a Netlify es utilizar la misma cuenta de Github. Luego es preciso establecer una conexion entre el repositorio que queremos publicar y su localizacion de publicacion. Existe un boton que indica publicacion de un nuevo sitio web, y un asistente te dirige a lo largo de proceso.</p>
 <p>Si has llegado hasta aqui, y todo a funcionado, de ahora en adelante, no necesitaras interactuar con Gibhub ni Netlify. Sigues los pasos para actualizar tu repositorio local, y luego, solo tendras que escribir <code>git push -u origin main</code>, y la actualizacion de tu web se publicara inmediatamente.</p>

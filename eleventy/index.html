@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Breve reseña - Soporte tecnico</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Breve rese\u00f1a";
+        var mkdocs_page_input_path = "eleventy.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <script src="../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="..">
+          <img src="../img/favicon--96x96.png" class="logo" alt="Logo"/>
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Inicio</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="/">Volver a Verba Volant</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte técnico de esta web</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../mkdocs/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown/">Tecnica de escritura</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../markdown_extensions/">Tecnica de escritura avanzada</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../configuracion_yaml/">Configuracion del sistema</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../publicacion_automatica/">Publicacion automatica en Netlify</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">S. tecn. de la web de presentación</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../integracion/">Integración del proyecto</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Soporte técnico del blog</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Breve reseña</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#estructura-de-proyecto-con-eleventy">Estructura de proyecto con Eleventy</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#paginacion">Paginación</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#integrar-en-otro-sitio-web">Integrar en otro sitio web</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Soporte tecnico</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Soporte técnico del blog &raquo;</li><li>Breve reseña</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="breve-resena-de-eleventy">Breve reseña de Eleventy</h1>
+<p>Mkdocs no esta orientado a la creacion de un blog, sino de documentacion en linea. En un blog, los articulos se organizan conforme a sus metadatos, ya sea por su orden cronologico de entrada o mediante palabras claves (tags) relacionados con su contenido, y se presentan en paginas html como listas de enlaces. Como Mkdocs no soporta estas caracteristicas, hemos cambiado a Eleventy.</p>
+<p>Eleventy es un generador de sitios web basado en javascript. Utiliza distintos lenguajes de plantilla (template languages), para construir las paginas html. Los dos lenguajes basicos son liquid y nunjucks.</p>
+<p>Liquid se basa en el lenguaje yaml situado en la cabecera del documento (front matter), y permite aplicar sus datos dentro de plantillas incluidas en el html. Nunjucks es similar, pero adicionalment admite el uso de javascript en el front matter.</p>
+<pre><code>---
+title: Birds
+birds:
+  - robin
+  - finch
+  - sparrow
+---
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;{{ title }}&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;{{ title }}&lt;/h1&gt;
+
+    &lt;ul&gt;
+        {% for bird in birds %}
+        &lt;li&gt;{{ bird }}&lt;/li&gt;
+        {% endfor %}
+    &lt;/ul&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p>El resultado de este bloque al construir la pagina html seria.</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset=&quot;utf-8&quot;&gt;
+&lt;title&gt;Birds&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;Eleventy Title from Data&lt;/h1&gt;
+&lt;ul&gt;
+
+    &lt;li&gt;robin&lt;/li&gt;
+
+    &lt;li&gt;finch&lt;/li&gt;
+
+    &lt;li&gt;sparrow&lt;/li&gt;
+
+&lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+</code></pre>
+<p>Sobre el concepto que soporta este ejemplo basico se construye Eleventy. Las plantillas se usan para dividir el html de la pagina final en distintos componentes, desde un armazon base en el archivo base.njk, hasta pequeños fragmentos de numjucks que vehiculan los metadatos html para crear elementos de una lista, y se engloban en una estructura for.</p>
+<p>Una vez creada esta estructura, la informacion incorporada en nuestros archivos markdown fluye atraves de estas plantillas incorporando caracteristicas y generando distintos tipos de paginas html.</p>
+<h2 id="estructura-de-proyecto-con-eleventy">Estructura de proyecto con Eleventy</h2>
+<p>Por su complejidad, utilizar correctamente Eleventy lleva tiempo. Un camino que nos permite utilizar el programa inmediatamente es instalar el <a href="https://github.com/11ty/eleventy-base-blog">modelo basico</a>, que la propia Eleventy pone a nuestra disposicion.</p>
+<p>En su estructura, existen distintos componentes direrenciados:</p>
+<ul>
+<li>
+<p>La plantilla base y sus asociadas directas,en el directorio _include, escritas en nunjucks con cabeceras yaml.</p>
+</li>
+<li>
+<p>Las entradas del blog, en el directorio posts, escritas en markdown con cabeceras yaml.</p>
+</li>
+<li>
+<p>Puntos de acceso del navegador, en el directorio base. Estas paginas presentan listas cronologicas y son mostradas desde los enlaces navegador de la aplicacion. Utilizan el tag post y generan una lista con los articulos que incluyen dicho tag. Los datos del tag se encuentran almacenados en una clase nativa del programa llamada collections.</p>
+</li>
+<li>
+<p>Listados de tags, en el directorio base. Similar a al anterior, su objetivo es mostrar el listado de todos lo tags. En este caso de ha incluido una nueva coleccion con el listado de tags en el archivo de javascript, .eleventy.js. Posteriormentese ha utilizado como en el caso anterior.</p>
+</li>
+</ul>
+<p>La clase collections se vuelve un elemento fundamental al manejar los tags, y en la formacion de estruturas for que generen listas en nuestro html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Blog Posts&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;ul&gt;
+        {% for post in collections.post -%}
+        &lt;li&gt;{{ post.data.title }}, {{ post.data.date }}&lt;/li&gt;
+        {% endfor -%}
+    &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>Esta breve orientacion muestra los caminos que sigue la informacion desde los archivo de liquid, atraves de plantillas nunjucks y clases collection, hasta la creacion de las paginas html dentro de este modelo basico. Con el uso de este modelo, la documentacion oficial, este <a href="https://egghead.io/courses/build-an-eleventy-11ty-site-from-scratch-bfd3"> video-tutorial</a> y esta otra <a href="https://rphunt.github.io/eleventy-walkthrough/">documentacion</a> que incide en aspectos mas teoricos,  podremos manejar el programa.</p>
+<p>Hay que tener en cuenta que el modelo basico tiene todas funcionalidades propias de un blog, y que modificar el aspecto estetico, corre en paralelo al programa y se basa en css ligado a nuestra plantilla base.</p>
+<h2 id="paginacion">Paginación</h2>
+<p>Antes de terminar, me gustaria añadir a los conceptos clave de las plantillas y las colecciones, el concepto de <a href="https://rphunt.github.io/eleventy-walkthrough/pagination.html#basicpaginationjsonarray">paginación</a>.</p>
+<p>La paginacion se incluye en el front matter de la siguiente manera,</p>
+<pre><code>---
+title: Fish Paged
+pagination:
+    data: fishList
+    size: 2
+---
+{% include _head.html %}
+&lt;h1&gt;{{ title }}&lt;/h1&gt;
+&lt;ul&gt;
+    {% for fish in pagination.items -%}
+    &lt;li&gt;{{ fish }}&lt;/li&gt;
+    {% endfor -%}
+&lt;/ul&gt;
+{% include _foot.html %}
+</code></pre>
+<p>Esto permite, igual que hacia el ejemplo del <a href="#estructura-de-proyecto-con-eleventy">inicio</a>, introducir una estructura de datos dentro de las plantillas de html, solo que en lugar de usar elementos procedentes del front matter, lo introduciriamos desde un archivo json situado en un directorio predefinido llamado _data. En el ejemplo seria un archivo llamado fishList.json y referenciado desde data en el front matter.</p>
+<p>El mismo metodo tambien se puede usar para acceder a las colecciones de programa. Este sitema es usado en el archivo page-list.njk de nuestro modelo basico de Eleventy.</p>
+<h2 id="integrar-en-otro-sitio-web">Integrar en otro sitio web</h2>
+<p>No seria extraño que nos interesase integra el blog para complementar otra web, y la forma de hacerlo es modificado parcialmente la ruta de acceso antes de construir el blog. Esto se realiza en el archivo .eleventy.js. modificando el componente pathPrefix. </p>
+<h2 id="conclusion">Conclusion</h2>
+<p>Es evidente que crear un blog no es tan sencillo tecnicamente como crear una pagina de documentacion, ya que hay que crear pagina html mucho mas flexibles. Utilizando el modelo básico de Eleventy, tendremos un buen punto de partida para publicar el blog inmediatamente al tiempo que vamos aprendiendo como adaptarlo a nuestras necesidades.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../integracion/" class="btn btn-neutral float-left" title="Integración del proyecto"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../integracion/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

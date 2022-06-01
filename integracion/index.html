@@ -5,15 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Creación paso a paso de página web - Soporte tecnico</title>
+    <title>Integración del proyecto - Soporte tecnico</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Creaci\u00f3n paso a paso de p\u00e1gina web";
-        var mkdocs_page_input_path = "desarrollo_css.md";
+        var mkdocs_page_name = "Integraci\u00f3n del proyecto";
+        var mkdocs_page_input_path = "integracion.md";
         var mkdocs_page_url = null;
       </script>
     
@@ -66,17 +66,17 @@
               <ul class="current">
                   <li class="toctree-l1"><a class="reference internal" href="../html_tecnica/">Aspectos básicos</a>
                   </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Creación paso a paso de página web</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../desarrollo_css/">Creación paso a paso de página web</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Integración del proyecto</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#herramientas">Herramientas</a>
+    <li class="toctree-l2"><a class="reference internal" href="#directorios-y-enlaces">Directorios y enlaces.</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#proceso-paso-a-paso">Proceso paso a paso.</a>
+    <li class="toctree-l2"><a class="reference internal" href="#creacion-de-dominio-propio">Creación de dominio propio</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusión</a>
     </li>
     </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../integracion/">Integración del proyecto</a>
                   </li>
               </ul>
               <p class="caption"><span class="caption-text">Soporte técnico del blog</span></p>
@@ -98,7 +98,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" alt="Docs"></a> &raquo;</li>
-          <li>S. tecn. de la web de presentación &raquo;</li><li>Creación paso a paso de página web</li>
+          <li>S. tecn. de la web de presentación &raquo;</li><li>Integración del proyecto</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -108,35 +108,32 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="creacion-paso-a-paso-de-pagina-web">Creación paso a paso de página web</h1>
-<p>La pagina de presentación de este sitio web, es una ‘web resposive’. Esto significa que su distribución se modifica conforme al tamaño de pantalla del dispositivo, manteniendo un estilo atractivo.</p>
-<p>Este tipo de paginas web se ha ido imponiendo con la aparición de los dispositivos móviles. La razón es que la interacción con el dispositivo móvil y el ordenador es distinta, en uno se da preferencia al desplazamiento vertical de la pagina y en el otro al click con el raton. Para unir estas dos características, lo ideal es realizar una única pagina de presentación donde te desplazas verticalmente o a través de clics en el navegador.</p>
-<h2 id="herramientas">Herramientas</h2>
-<p>La herramienta básica en cualquier programación es un editor de texto, si bien, para facilitar la tarea es preferible un entorno de desarrollo, siendo mi recomendación Visual Studio Code. Presenta un sistema de auto-completado de etiquetas html muy util y la posibilidad de lanzar un servidor para ver la evolución de la pagina web a medida que realizamos cambios.</p>
-<p>Otra herramienta imprescindible es un entorno de desarrollo en linea llamado Codepen, que te permite hacer simulacros de partes de tu pagina web para ver su funcionamiento y luego incorporarlos a tu propio proyecto. También tiene una biblioteca de proyectos de otras personas, que puedes manipular como proceso de aprendizaje.</p>
-<h2 id="proceso-paso-a-paso">Proceso paso a paso.</h2>
-<p>El proceso de creación de una pagina web conviene realizarlo desde lo general a lo particular. La base del diseño son los distintos bloques que constituyen el cuerpo de la pagina, con su texto y fotos. Luego el pie de pagina, y por ultimo el cabecero que incluye el navegador que es el apartado mas dinámico y con una distribución mas complicada.</p>
-<ol>
-<li>
-<p>La base del diseño. En este punto voy a recomendar el tutorial  realizado por <a href="https://www.youtube.com/watch?v=bn-DQCifeQQ">Kevin Powell</a>. Es insuperable. Quiero destacar dos cosas:</p>
-<p>El uso que hace del módulo flexbox, pudiendo ampliar el conocimiento de este módulo con otros tutoriales del mismo autor. </p>
-<p>Como comienza a configurar su archivo css desde características generales de tipografía,  de color de fondo y fuentes; y con la eliminacion de los margenes preconfigurados en los distintos elementos.</p>
-</li>
-<li>
-<p>Crear el pie de pagina. El pie de pagina es el bloque inferior de la base del diseño, por lo que se aplica la misma técnica. La diferencia es que por convención, en este apartado se sitúan los avisos legales, la política de privacidad y de cookies. En breve, es obligatorio incluir todo estos apartados en aquellas paginas en que se busque un beneficio económico, se recopilen datos de los usuarios -por ejemplo, en formularios – o se utilicen cookies.</p>
-</li>
-<li>
-<p>Crear el cabecero, con el navegador. La distribución de elementos tiene sus características particulares en comparación al diseño base y exige un control mayor de los cambios, ya que podemos hacer aparecer y desaparecer elementos del navegador en función del tamaño de pantalla. Este tutorial de <a href="https://www.youtube.com/watch?v=8QKOaTYvYUA">Kevin Powell</a> resulta muy clarificador.</p>
-</li>
-</ol>
+                <h1 id="integracion-del-proyecto">Integración del proyecto.</h1>
+<p>En este punto, disponemos de dos componentes diferenciados, una pagina web responsive creada directamente con html y css, y un sitio web con una estructura de directorios y paginas webs.<br />
+Ambos componentes los vamos a unir en un mismo directorio, vamos a incorporar los enlaces para que interactuen y por ultimo, los vamos a poner en linea en un dominio propio.</p>
+<h2 id="directorios-y-enlaces">Directorios y enlaces.</h2>
+<p>La estructura de directorios se forma al introducir el directorio del soporte tecnico dentro del de la pagina web en la forma:</p>
+<pre><code>pagina-web
+    |____ soporte-tecnico
+</code></pre>
+<p>En mi caso, tengo un git en el directorio de salida habitual del generador de sitios web. Por ello, genero un directorio de salida especifico con la orden: <code>mkdocs build -d soporte-tecnico</code></p>
+<p>Antes de generar dicha salida, modifico el archivo yaml con una entrada en el navegador del tipo <code>-Volver a pagina-web: '../'</code>, que permite ir al directorio raiz de pagina-web. Como no transcribe bien esta referencia en el archivo index.html de soporte-tecnico, a posteriori hay que reescribirla en dicho archivo.</p>
+<p>En el la propia pagina web, tambien escribo la refencia de soporte tecnico del navegador con el directorio incorporado <code>/soporte-tecnico/</code></p>
+<p>Y con estos cambios quedan conectadas, se puede comprobar en el servidor local y empujar a la red.</p>
+<h2 id="creacion-de-dominio-propio">Creación de dominio propio</h2>
+<p>Hoy en dia existe un proveedor de dominios web gratuitos llamado freenom, que nos puede servir para ir conociendo la tecnica de configuracion de un dominio propio.</p>
+<p>El paso mas sencillo es conectarse a su sitio web, comprobar si un dominio esta disponible. Esto se hace en un buscador que la pagina pone a tu disposicion.</p>
+<p>Si bien encontraras dominios disponibles, no podras seleccionarlos en esta busqueda inicial. Para seleccionarlos deberas volver a buscar, pero esta vez incluyendo la extension seleccionada en el termino de busqueda.</p>
+<p>A partir de aqui inicias un procedimiento de registro en freenom, y el siguiente obstaculo surge al configurar netlify para utilizar el dominio.</p>
+<p>Primero, tienes que indicar el nombre del dominio personalizado a netlify en el apartado de custom domains. Tras incluir el nombre, netlify te ofrece un desplegable de opciones donde aparece un panel de DNS (servicios de nombre de dominio), aqui puedes encontrar los nombres de servidores de netlify. Ahora hay que copiar estos nombres y pegarlos en freenon en el apartado de gestion de tu dominio. En este momento tu dominio queda dirigido hacia netlify, este realiza las pertinentes comprobaciones del certificado de seguridad y tu nombre de dominio queda activo. </p>
 <h2 id="conclusion">Conclusión</h2>
-<p>Siguiendo los pasos en los tutoriales descritos se puede realizar una pagina web responsive basada exclusivamente en html y css. Kevin Powell es un gran comunicador y sus innumerables tutoriales facilitan la comprensión de los distintos componentes de css. Ademas, los ejemplos de Codepen te aportan nuevas ideas y tecnicas haciendo que este sea un camino relativamente fácil de introducirse en el mundo de la programación.</p>
+<p>A partir de este momento todo el soporte tecnico de nuestro sitio web esta realizado. Resta incorporar un segundo generador de sitios web, que funciona como el primero salvo que utilizaremos un tema diferente.</p>
               
             </div>
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../html_tecnica/" class="btn btn-neutral float-left" title="Aspectos básicos"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../integracion/" class="btn btn-neutral float-right" title="Integración del proyecto">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../desarrollo_css/" class="btn btn-neutral float-left" title="Creación paso a paso de página web"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../eleventy/" class="btn btn-neutral float-right" title="Breve reseña">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -159,10 +156,10 @@
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
-      <span><a href="../html_tecnica/" style="color: #fcfcfc">&laquo; Previous</a></span>
+      <span><a href="../desarrollo_css/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../integracion/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../eleventy/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
